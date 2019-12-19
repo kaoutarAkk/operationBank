@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsd:schema version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="com/operation/demo/generated"
+            xmlns:tns="com/operation/demo/generated"
+            elementFormDefault="qualified"
+>
+
+    <xsd:element name="RechargeRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="numero" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="montant" type="xsd:double"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="RechargeResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="return" type="xsd:boolean" minOccurs="0"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
+

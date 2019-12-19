@@ -4,11 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,4 +19,7 @@ public class Client implements Serializable {
     private String nom;
     private String email;
     private String operateur;
+    private String telephone;
+    @OneToMany(mappedBy = "client")
+    private List<Operation> operations;
 }
